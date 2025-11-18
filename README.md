@@ -109,6 +109,10 @@ npm install
 # 4. Run the application
 npm run dev
 # Open http://localhost:3000 in your browser
+
+# 5. Verify setup (optional but recommended)
+cd ..
+python verify_setup.py
 ```
 
 ### Complete Setup Guide
@@ -126,6 +130,17 @@ This comprehensive guide includes:
 Alternatively, follow the dedicated READMEs:
 - [Backend Setup](backend/README.MD) - Python backend configuration
 - [Frontend Setup](frontend/README.md) - Next.js frontend configuration
+
+### Setup Tools Available
+
+To make setup easier, we provide several tools:
+
+| Tool | Description | Usage |
+|------|-------------|-------|
+| `setup.sh` | Automated setup script for Linux/macOS | `./setup.sh` |
+| `setup.bat` | Automated setup script for Windows | `setup.bat` |
+| `verify_setup.py` | Verify your installation is complete | `python verify_setup.py` |
+| `backend/.env.example` | Template for environment variables | Copy to `.env` and edit |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
