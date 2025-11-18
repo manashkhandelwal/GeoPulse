@@ -273,6 +273,23 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
 NEXT_PUBLIC_NEO4J_URI=bolt://localhost:7687
 ```
 
+## ✅ Verify Your Setup
+
+After completing the setup, run the verification script to ensure everything is configured correctly:
+
+```bash
+python verify_setup.py
+```
+
+This script will check:
+- Python version and all required packages
+- Node.js and npm installation
+- Frontend dependencies (node_modules)
+- Environment configuration (.env file)
+- Virtual environment status
+
+If all checks pass, you're ready to run the application!
+
 ## 🐛 Troubleshooting
 
 ### Common Issues and Solutions

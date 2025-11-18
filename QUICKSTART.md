@@ -135,7 +135,23 @@ python upload_opinions.py
 
 ## Verification
 
+### Automated Verification
+
+Run the verification script to check your setup:
+
+```bash
+python verify_setup.py
+```
+
+This will check:
+- Python version and packages
+- Node.js and npm installation
+- Frontend dependencies
+- Environment configuration
+- Virtual environment status
+
 ✅ **Success indicators:**
+- All verification checks pass
 - No error messages during installation
 - Frontend dev server starts successfully
 - Can access http://localhost:3000
