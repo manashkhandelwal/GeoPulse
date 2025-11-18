@@ -15,6 +15,10 @@
     <a href="https://github.com/group-geopulse/GeoPulse"><strong>Explore the repo»</strong></a>
     <br />
     <br />
+    <a href="QUICKSTART.md"><strong>🚀 Quick Start Guide</strong></a>
+    ·
+    <a href="SETUP.md"><strong>📖 Complete Setup Guide</strong></a>
+    <br />
     <a href="https://youtu.be/Fa4aPGJKzLA">View Demo</a>
     ·
     <a href="https://github.com/group-geopulse/GeoPulse/issues">Report Bug</a>
@@ -72,15 +76,71 @@ GeoPulse is built for policymakers, analysts, and researchers seeking a clearer 
 
 To get a local copy up and running, follow these steps:
 
-### Cloning the repository
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- **Python 3.11.9** - [Download here](https://www.python.org/downloads/)
+- **Node.js 18+** and **npm** - [Download here](https://nodejs.org/)
+- **Git** - [Download here](https://git-scm.com/)
+
+You'll also need access to:
+- **MongoDB** (Atlas or local installation)
+- **Neo4j** (Aura or local installation)
+- **Google Custom Search API** credentials
+
+### Quick Start
 
 ```bash
-> git clone https://github.com/group-geopulse/GeoPulse.git
+# 1. Clone the repository
+git clone https://github.com/group-geopulse/GeoPulse.git
+cd GeoPulse
+
+# 2. Backend Setup
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env  # Edit with your credentials
+
+# 3. Frontend Setup
+cd ../frontend
+npm install
+
+# 4. Run the application
+npm run dev
+# Open http://localhost:3000 in your browser
+
+# 5. Verify setup (optional but recommended)
+cd ..
+python verify_setup.py
 ```
 
-### Setting up the repository to run the application
+### Complete Setup Guide
 
-Follow the relevant instructions in the dedicated READMEs in the backend and frontend folders.
+**📖 For detailed setup instructions, troubleshooting, and configuration, see [SETUP.md](SETUP.md)**
+
+This comprehensive guide includes:
+- Detailed prerequisites and system requirements
+- Step-by-step installation instructions
+- Environment variable configuration
+- Running backend scripts
+- Common issues and troubleshooting
+- Verification checklist
+
+Alternatively, follow the dedicated READMEs:
+- [Backend Setup](backend/README.MD) - Python backend configuration
+- [Frontend Setup](frontend/README.md) - Next.js frontend configuration
+
+### Setup Tools Available
+
+To make setup easier, we provide several tools:
+
+| Tool | Description | Usage |
+|------|-------------|-------|
+| `setup.sh` | Automated setup script for Linux/macOS | `./setup.sh` |
+| `setup.bat` | Automated setup script for Windows | `setup.bat` |
+| `verify_setup.py` | Verify your installation is complete | `python verify_setup.py` |
+| `backend/.env.example` | Template for environment variables | Copy to `.env` and edit |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
